@@ -35,7 +35,7 @@ export const VideoPlayer = (props) => {
   const handleOnHover = () => {
     if (!controlsVisibility) {
       setControlsVisibility(true);
-      setTimeout(() => setControlsVisibility(false), 3000000);
+      setTimeout(() => setControlsVisibility(false), 3000);
     }
   };
 
