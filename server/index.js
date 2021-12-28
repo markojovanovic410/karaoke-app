@@ -382,7 +382,7 @@ app.get('/reload_folder/:id/:name', async function(req, res) {
     await get_all_files(path, req.params.id);
     let temp_files = new Array(files.length);
     let changed = false;
-	console.log('checking...')
+	  console.log('checking...')
     for (const song of all_songs) {
         if(files.some(item => item.path == song.path)) {
           for (let i = files.length - 1; i >= 0; i--) {
@@ -672,7 +672,7 @@ app.get('/show_singer_playlist/:id', async function(req, res) {
     if(sort_by === 'artist') {
       if(sort_order === 1) {
         files.sort((a, b) => 
-          app.artist.localeCompare(b.artist)
+          a.artist.localeCompare(b.artist)
         )
       } else if(sort_order === -1) {
         files.sort((a, b) => 
